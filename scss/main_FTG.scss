@@ -1,0 +1,546 @@
+$firstbackground: #FCFCFC; //BABY POWDER
+$secondbackground: black;
+$accentone: #B80C09;
+$gold: #FFBF00; //FLUORESCENT ORANGE
+$rorange: #B80C09; //INTERNATIONAL ORANGE (ENGINEERING)
+$bluedazzle: #235789; //B'DAZZLED BLUE
+$mainfont: "UniNeue-HeavyItalic", sans-serif; // main font #efefef
+$coachpic: background url('../img/pexels-photo-1543924.png') no-repeat 25% 25%/cover; // picture of coach
+$morder: dotted black 1px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+        background: linear-gradient(to left top, #ffffff 0%, #efefef 100%);
+        max-width: 100%;
+        overflow-x: hidden;
+}
+
+
+// HEADER WITH SOCIAL MEDIA LINKS AND BRAND ICON
+
+    #header {
+        width: 100vw;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    #brand-icon {
+        grid-column: 1 / span 2;
+        padding-left: 10rem;
+        text-shadow: $gold 3px 3px;
+    }
+
+
+    .navbar {
+        grid-column: 3 / span 1;
+        margin-left: 28rem;
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        height: 7%;
+        margin-right: 5rem;
+        padding-bottom: 1rem;
+
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: #efefef;
+            border: $firstbackground;
+            border-radius: 40px;
+            position: absolute;
+            z-index: -1;
+            opacity: .5;
+        }
+
+
+
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        margin: 1rem;
+// SOCIAL MEDIA LINKS
+        .fab {
+            font-size: 2.3rem;
+            padding-right: 1rem;
+            color: $gold;
+            text-decoration: none;
+            text-shadow: $gold 1px 1px;
+        }
+
+        .fab:hover {
+            margin: .1rem;
+            border-bottom: $bluedazzle solid 11px;
+            border-radius: 5px;
+        }
+
+
+
+    }
+
+    li {
+        list-style: none;
+        margin-right: 5rem;
+        font-family: $mainfont;
+        font-size: 1.5rem;
+    }
+
+    .page-nav {
+        color: black;
+        text-decoration: none;
+    }
+
+    li:hover {
+        border-bottom: $gold solid 15px;
+        border-radius: 5px;
+    }
+}
+
+// TOP OF SCREEN WITH QUOTES AND FULL BODY COACH IMAGE
+
+#mainbody {
+    background: linear-gradient(to left top, #ffffff 0%, #efefef 100%);
+
+    #section1container {
+        display: grid;
+        width: 99%;
+        height: 85vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .coach-img {
+        grid-column: 2 / span 3;
+        grid-row: 1 / span 3;
+        margin-top: 1.2rem;
+        background: url('../img/pexels-photo-1543924.png') no-repeat;
+        background-position: right bottom;
+        background-size: 970px;
+        filter: grayscale(.1);
+        z-index: 1;
+    }
+
+    .title {
+        grid-column: 1 / 4;
+        grid-row: 1 / span 1;
+        font-family: $mainfont;
+        font-size: 7rem;
+        text-shadow: $gold 4px 4px;
+        z-index: 2;
+        margin-left: 6rem;
+    }
+
+    .statement {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        font-family: $mainfont;
+        font-size: 4rem;
+        margin-top: 2rem;
+        align-self: end;
+        text-align: center;
+        z-index: 1;
+}
+
+    .quote {
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 2;
+        font-family: $mainfont;
+        font-size: 1.4rem;
+        transform: rotate(90deg);
+        text-decoration: underline solid black;
+        line-height: 2rem;
+        margin-right: 5rem;
+        z-index: 1;
+    }
+
+    .fyg {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        font-family: $mainfont;
+        font-size: 8rem;
+        transform: rotate(270deg);
+        margin-bottom: 6rem;
+        z-index: 1;
+        text-shadow: $gold 3px 3px;
+    }
+
+// BLUE & GOLD BACKGROUND RECTANGLES
+
+    .back-color {
+        grid-column: 2 / span 3;
+        grid-row: 2 / span 2;
+        background-image: linear-gradient(to left top, $gold 0%, $gold 100%);
+        z-index: 0;
+        opacity: .9;
+        margin-bottom: 5rem;
+    }
+
+    .secondaryback-color {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 3;
+        width: 10rem;
+        background-image: linear-gradient(to left top, $bluedazzle 0%, $bluedazzle 100%);
+        opacity: .9;
+    }
+
+    .xo {
+        font-family: $mainfont;
+        font-size: 5rem;
+    }
+
+    .x-1, .o-1{
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 2;
+        padding-top: 9rem;
+    }
+
+    .x-1 {
+            z-index: 1;
+        }
+
+    .o-1{
+        margin-left: 3rem;
+        margin-top: 4rem;
+    }
+
+    .x-2, .o-2 {
+        grid-column: 4 / span 1;
+        grid-row: 2 / span 1;
+        z-index: 2;
+        color: white;
+        text-shadow: $rorange 2px 2px;
+    }
+
+    .x-2 {
+        margin-left: 4rem;
+        margin-top: 3rem;
+        z-index: 1;
+    }
+
+    .o-3 {
+        grid-column: 3 / span 1;
+        grid-row: 3 / span 1;
+        z-index: 1;
+        align-self: end;
+        color: white;
+        text-shadow: $bluedazzle 8px 8px;
+        font-size: 7rem;
+    }
+}
+
+// OUR MISSION OUR MISSION OUR MISSION OUR MISSION OUR MISSION OUR MISSION
+
+#our-Mission {
+    width: 100vw;
+    height: 33rem;
+    background: $gold;
+    // opacity: .9
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .mission-container {
+        height: 70%;
+        width: 100vw;
+        background: $bluedazzle none no-repeat scroll 0 0;
+        opacity: .9;
+        border: $gold solid 15px;
+        border-radius: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $firstbackground;
+        font-family: $mainfont;
+        font-size: 2rem;
+        overflow: auto;
+
+    h1 {
+        text-shadow: $rorange 3px 3px;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+
+    }
+
+     .about-container {
+        height: 100%;
+        width: 100vw;
+        background: $bluedazzle none no-repeat scroll 0 0;
+        opacity: .9;
+        border: $gold solid 15px;
+        border-radius: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $firstbackground;
+        font-family: $mainfont;
+        font-size: 2rem;
+        // margin: .2rem;
+        overflow: auto;
+    }
+
+    h1 {
+        text-shadow: $rorange 3px 3px;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+}
+
+// COACHES COACHES COACHES COACHES COACHES COACHES COACHES COACHES COACHES
+
+#coaches {
+    background: $bluedazzle;
+    // height: 100%;
+
+
+    #coach-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+
+    .coach-contain {
+        margin: 2rem;
+        // height: 80%;
+        font-family: $mainfont;
+        color: $firstbackground;
+        font-size: 1.3rem;
+
+
+    h3 {
+        text-align: center;
+    }
+
+    }
+
+    .circle {
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin: 1em auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 99em;
+        border: 5px solid #eee;
+        box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+        border-image-slice: 60 53 279 115;
+        border-image-width: 20px 20px 20px 20px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: stretch stretch;
+        z-index: 1;
+    }
+
+    .pic-one {
+        background: url('../img/coach1.jpg') 65% 20%;
+        z-index: 2;
+        border-color: $gold;
+    }
+
+    .pic-two {
+        background: url('../img/coach2.jpeg') 55% 50%;
+        z-index: 2;
+        background-size: 350px;
+        border-color: $rorange;
+    }
+
+    .pic-three {
+        background: url('../img/coach3.jpeg') 70% 70%;
+        z-index: 2;
+        background-size: 130px;
+        border-color: $gold;
+    }
+
+    .pic-four {
+        background: url('../img/coach4.jpeg') 77% 10%;
+        z-index: 2;
+        background-size: 500px;
+        border-color: $rorange;
+    }
+
+    .pic-five {
+        background: url('../img/coach5.jpeg') 55% 10%;
+        z-index: 2;
+        background-size: 250px;
+        border-color: $gold;
+    }
+
+    .pic-six {
+        background: url('../img/coach6.jpeg') 65% 60%;
+        z-index: 2;
+        background-size: 130px;
+        border-color: $rorange;
+    }
+
+    // ARROW DOWN TO SECOND SET OF COACHES
+
+    #arrow {
+        position: absolute;
+        font-size: 10rem;
+        color: $gold;
+        text-shadow: white 0px -3px;
+        top: 145rem;
+        left: 45%;
+        animation-name: arrow-animate;
+        animation-duration: .70s;
+        animation-iteration-count: infinite;
+
+        @keyframes arrow-animate {
+            from {
+
+            }
+
+            to {
+                margin-top: 1rem;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: $gold;
+        }
+
+        a:hover {
+            text-shadow: $rorange 5px 5px;
+        }
+    }
+}
+
+// CONTACT & FOOTER CONTACT & FOOTER  CONTACT & FOOTER  CONTACT & FOOTER
+
+
+#contact-footer {
+    width: 100vw;
+    height: 65rem;
+    background: url('../img/coachingshot.jpeg') no-repeat 50% 50%/cover;
+    background-position: 50% 10%;
+    opacity: .9;
+    position: absolute;
+
+
+    .form-container{
+        width: 100vw;
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        .form {
+            position: absolute;
+            top: 00%;
+            left: 33%;
+            line-height: 2.2rem;
+            background: $gold;
+            border: rgba(255, 255, 255, 0) 5px solid;
+            border-radius: 10px;
+            width: 45rem;
+            height: 39 rem;
+            padding: 1rem;
+            padding-left: 3rem;
+            // text-align: center;
+            font-size: 1.3rem;
+            font-family: $mainfont;
+            // min-height: 500px;
+            opacity: .8;
+
+        textarea {
+            resize: none;
+            border: $gold 1px solid;
+            border-radius: 10px;
+            outline: none;
+            font-size: 1rem;
+            text-align: center
+
+        }
+
+
+        .submission {
+            display: flex;
+            width: 29rem;
+            height: 1.2rem;
+        }
+
+        #submit {
+            position: relative;
+            z-index: 2;
+            width: 250px;
+            text-align: center;
+            margin-left: 10rem;
+            border: $gold 1px solid;
+            border-radius: 15px;
+            outline: none;
+        }
+
+        }
+
+
+        }
+
+    .footer {
+        width: 100vw;
+        height: 15rem;
+        position: absolute;
+        color: $firstbackground;
+        top: 50rem;
+
+
+        &:before {
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            background: black;
+            opacity: .8;
+            z-index: -1;
+
+        }
+
+        .foot-content {
+            position: absolute;
+            top: 35%;
+            left: 43%;
+
+
+            p {
+                font-size: .9rem;
+            }
+
+            .fab{
+                text-align: center;
+                font-size: 3rem;
+                padding-right: .6rem;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+        }
+
+
+    }
+}
+
+// Import Media Queries
+@import 'media';
